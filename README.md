@@ -1,10 +1,10 @@
-# koljakrause.com
+# Kolja Krause – Blog
 
 Mein Blog. Gebaut mit GitHub Pages (Jekyll), Design angelehnt an Bear Blog.
 
 ## Neuen Artikel veröffentlichen (der einfache Weg)
 
-1. **koljakrause.com/schreiben/** öffnen (vorher bei GitHub eingeloggt sein)
+1. **koljakrause.github.io/schreiben/** öffnen (vorher bei GitHub eingeloggt sein)
 2. Titel eintippen, auf **Weiter zu GitHub** klicken
 3. Text in die Vorlage schreiben (Leerzeile = neuer Absatz)
 4. Oben rechts **Commit changes…**, dann nochmal **Commit changes**
@@ -48,4 +48,4 @@ Datei in `_posts` anklicken → Stift-Symbol (bearbeiten) oder `…` → Delete 
 - `_layouts/` – HTML-Gerüst der Seiten
 - `style.css` – Aussehen
 - `_config.yml` – Titel, Beschreibung, Domain
-- `CNAME` – eigene Domain (kommt nach dem Domainkauf dazu)
+- `CNAME` – eigene Domain (kommt erst dazu, falls du später koljakrause.com kaufst)
