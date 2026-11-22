@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍️</text></svg>">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  {% seo %}
+  {% feed_meta %}
+  {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
+</head>
+<body>
+  <header>
+    <a class="title" href="{{ '/' | relative_url }}"><h1>{{ site.title }}</h1></a>
+    <nav>
+      <p>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      </p>
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <small>© {{ 'now' | date: "%Y" }} {{ site.author }} · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></small>
+  </footer>
+</body>
+</html>

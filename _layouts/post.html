@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<p>
+  <i><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b, %Y" }}</time></i>
+</p>
+
+{{ content }}
+
+<p><a href="{{ '/blog/' | relative_url }}">← Alle Artikel</a></p>
