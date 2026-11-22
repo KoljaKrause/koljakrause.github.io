@@ -1,0 +1,19 @@
+# Grundeinstellungen der Website
+title: Kolja Krause
+description: Sometimes I write here
+author: Kolja Krause
+lang: de
+timezone: Europe/Berlin
+url: "https://koljakrause.github.io"   # nach dem Domainkauf: https://koljakrause.com
+
+# Artikel-Adressen wie bei Bear Blog: koljakrause.com/das-warum/
+permalink: /:title/
+
+markdown: kramdown
+plugins:
+  - jekyll-feed      # RSS-Feed unter /feed.xml
+  - jekyll-seo-tag   # Titel/Beschreibung für Google & Link-Vorschauen
+  - jekyll-sitemap   # sitemap.xml für Suchmaschinen
+
+exclude:
+  - README.md

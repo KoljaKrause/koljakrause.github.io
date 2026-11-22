@@ -1,0 +1,24 @@
+---
+layout: default
+title: Neuen Artikel schreiben
+permalink: /schreiben/
+noindex: true
+sitemap: false
+---
+<h2>Neuen Artikel schreiben</h2>
+<p>Titel eingeben und auf „Weiter zu GitHub“ klicken. GitHub öffnet dann eine fertige Vorlage. Text reinschreiben, unten auf <b>Commit changes</b> klicken, fertig. Nach ca. 1 Minute ist der Artikel online.</p>
+<p><input id="t" type="text" placeholder="Titel des Artikels" style="width:100%;padding:8px;font-size:1em"></p>
+<p><button id="go" style="padding:8px 14px;font-size:1em">Weiter zu GitHub »</button></p>
+<script>
+  document.getElementById('go').onclick = function () {
+    var title = document.getElementById('t').value.trim() || 'Neuer Artikel';
+    var slug = title.toLowerCase()
+      .replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss')
+      .replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    var d = new Date();
+    var day = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    var body = '---\ntitle: "' + title.replace(/"/g,'\\"') + '"\n---\n\nHier kommt dein Text hin.\n\nLeerzeile = neuer Absatz.\n';
+    location.href = 'https://github.com/KoljaKrause/koljakrause.github.io/new/main/_posts?filename='
+      + encodeURIComponent(day + '-' + slug + '.md') + '&value=' + encodeURIComponent(body);
+  };
+</script>
